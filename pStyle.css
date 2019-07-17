@@ -3,12 +3,15 @@ body {
 }
 
 #title {
-  margin-top: 15%;
-  text-align: center;
-  font-family: 'Averia Serif Libre', serif;
-  font-size: 64pt;
+/*  font-family: 'Averia Serif Libre', serif;*/
+  font-family: 'Cutive Mono', monospace;
+  font-size: 32pt;
   color: white;
   user-select: none;
+  position: fixed;
+  z-index: 4;
+  left: 5px;
+  transition: 0.6s ease;
 }
 
 #title:hover {
@@ -26,80 +29,53 @@ body {
   min-height: 100%;
 }
 
-@keyframes colorShiftBlue {
-  0% {
-    color: burlywood;
-  }
-  50% {
-    color: cornflowerblue;
-  }
-  100% {
-    color: burlywood;
-  }
-}
-
-@keyframes colorShiftRed {
-  0% {
-    color: burlywood;
-  }
-  50% {
-    color: red;
-  }
-  100% {
-    color: burlywood;
-  }
-}
-
-@keyframes colorShiftBlack {
-  0% {
-    color: slategray;
-  }
-  50% {
-    color: black;
-  }
-  100% {
-    color: slategray;
-  }
-}
-
 .links {
   font-family: 'Cutive Mono', monospace;
   font-size: 36pt;
   color: white;
   text-align: center;
   user-select: none;
+  position: fixed;
+  top: 5px;
+  left: calc(50% - 100px);
+  z-index: 3;
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  top: 60px;
+  left: 0px;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 0;
+}
+
+#links_projects{
+  color: white;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 24pt;
+  margin-top: 25px;
+  text-align: center;
+  display: none;
+  user-select: none;
 }
 
 #links_info:hover,
 #links_projects:hover,
-#links_contact:hover {
+#links_contact:hover,
+#title:hover{
   color: burlywood;
   cursor: pointer;
 }
 
-#email_form {
-  position: relative;
-  left: calc(50% - 300px);
-  width: 600px;
-  display: none;
-}
-
 a{
   text-decoration: none;
-  color: #17F;
+  z-index: 3;
 }
 
-#submit_form {
-  width: 100%;
-  height: 35px;
-  font-size: 16pt;
-  font-family: 'Cutive Mono', monospace;
-}
-
-#submit_form:hover {
-  cursor: pointer;
-  background-color: burlywood;
-  border-color: burlywood;
+a:hover{
+  opacity: .2;
 }
 
 #youtubeVid {
@@ -123,15 +99,18 @@ a{
   position: relative;
 }
 
+
+
 .project_text {
   font-size: 28pt;
   font-family: 'Cutive Mono', monospace;
   color: white;
+  width: 100%;
   text-align: center;
-  width: 600px;
-  left: calc(50% - 300px);
+  user-select: none;
   position: relative;
   text-shadow: 1px 1px black;
+  display: block;
 }
 
 .projButtons {
@@ -139,122 +118,30 @@ a{
   font-family: 'Cutive Mono', monospace;
   color: white;
   text-align: center;
-  width: 600px;
-  left: calc(50% - 300px);
+  width: 100%;
   margin-bottom: 15px;
   position: relative;
   user-select: none;
+  display: block;
 }
 
-#prev:hover,
-#back:hover,
-#next:hover {
-  text-transform: capitalize;
-  color: burlywood;
+.items{
+  position: relative;
+  display: inline-block;
+  width: 600px;
+  margin: 10px;
+  box-shadow: -5px 5px 4px 1px black;
+  height: 200px;
   cursor: pointer;
+  border: solid black 3px;
+  transition: 2s ease;
 }
 
-#drone,
-#uncanny,
-#noche,
-#villisca,
-#trump,
-#stop,
-#growth,
-#madness,
-#print, #lost, #fortune {
-  height: 30pt;
-  transition: height 0.25s linear;
-}
-
-#drone:hover {
-  /*animation: slide 1s ease 1;*/
-  /*animation-fill-mode: forwards;*/
+.items:hover{
+  color: red;
   height: 300px;
-  cursor: pointer;
-  background-image: url("assets/thumb_drone.png");
+  transition: 250ms ease;
 }
-
-#uncanny:hover {
-  height: 300px;
-  animation: colorShiftBlue 1s ease infinite;
-  cursor: pointer;
-  background-image: url("assets/thumb_uncanny.png");
-}
-
-#noche:hover {
-  height: 300px;
-  animation: colorShiftBlack 1s ease infinite;
-  cursor: pointer;
-  background-image: url("assets/thumb_noche.png");
-}
-
-#villisca:hover {
-  height: 300px;
-  animation: colorShiftRed 1s ease infinite;
-  cursor: pointer;
-  background-image: url("assets/thumb_villisca.png");
-}
-
-#trump:hover {
-  height: 300px;
-  animation: colorShiftRed 1s ease infinite;
-  cursor: pointer;
-  background-image: url("assets/thumb_trump.png");
-}
-
-#stop:hover {
-  height: 300px;
-  animation: colorShiftRed 1s ease infinite;
-  cursor: pointer;
-  background-image: url("assets/thumb_stop.png");
-}
-
-#growth:hover {
-  height: 300px;
-  animation: colorShiftRed 1s ease infinite;
-  cursor: pointer;
-  text-shadow: 1px 1px #000;
-  background-image: url("assets/thumb_growth.png");
-}
-
-#madness:hover {
-  height: 300px;
-  animation: colorShiftBlack 1s ease infinite;
-  cursor: pointer;
-  background-image: url("assets/thumb_madness.png");
-}
-
-#print:hover {
-  height: 300px;
-  animation: colorShiftBlack 1s ease infinite;
-  cursor: pointer;
-  background-image: url("assets/thumb_print.png");
-}
-
-#lost:hover {
-  height: 300px;
-  animation: colorShiftRed 1s ease infinite;
-  cursor: pointer;
-  background-image: url("assets/thumb_lost.png");
-}
-
-#fortune:hover {
-  height: 300px;
-  animation: colorShiftRed 1s ease infinite;
-  cursor: pointer;
-  background-image: url("assets/thumb_fortune.png");
-}
-
-@keyframes slide {
-  0% {
-    height: 28pt;
-  }
-  100% {
-    height: 300px;
-  }
-}
-
 
 * {
   box-sizing: border-box
@@ -277,29 +164,36 @@ img {
   display: none;
 }
 
-.prev,
-.next {
+#prev,
+#home,
+#next{
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
+  font-family: 'Cutive Mono', monospace;
+  color: black;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 32px;
+  padding-left: 6px;
+  padding-right: 6px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+
+#prev:hover,
+#home:hover,
+#next:hover{
+  color: burlywood;
 }
 
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+#seekBox{
+  top: 60px;
+  width: 300px;
+  left: calc(50% - 150px);
+  position: fixed;
+  text-align: center;
+  z-index: 3;
+  background: white;
+  display: none;
+  transition: 0.6s ease;
 }
 
 .numbertext {
@@ -309,6 +203,47 @@ img {
   font-family: 'Cutive Mono', monospace;
   position: absolute;
   top: 0;
+}
+
+#right{
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 5px;
+  font-size: 36pt;
+  color: white;
+  user-select: none;
+  cursor: pointer;
+  animation: colorShiftRed 3s ease infinite;
+}
+
+#left{
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 5px;
+  font-size: 36pt;
+  color: white;
+  user-select: none;
+  cursor: pointer;
+  animation: colorShiftRed 3s ease infinite;
+}
+
+#right:hover,
+#left:hover{
+  color: red;
+  opacity: 1;
+}
+
+@keyframes colorShiftRed{
+  0%{
+    color: white;
+  }
+  50%{
+    color: red;
+  }
+  100%{
+    color: white;
+  }
+  
 }
 
 .fade {
@@ -341,8 +276,8 @@ img {
     border: 0px;
     display: block;
     position: relative;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     width: 1280px;
     height: 720px;
     left: calc(50% - 640px);
@@ -351,8 +286,8 @@ img {
   .slideshow-container {
     max-width: 1200px;
     position: relative;
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     left: calc(50% - 600px);
   }
 }
@@ -362,8 +297,8 @@ img {
     border: 0px;
     display: block;
     position: relative;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     width: 600px;
     height: 337.5px;
     left: calc(50% - 300px);
@@ -372,8 +307,8 @@ img {
   .slideshow-container {
     max-width: 600px;
     position: relative;
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     left: calc(50% - 300px);
   }
 }
