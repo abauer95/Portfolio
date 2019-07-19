@@ -10,147 +10,45 @@
 </head>
 
 <body>
-  
- <!--<video autoplay muted loop id="backgroundVideo">
-          <source src="./assets/film_scratches.mp4" type="video/mp4">
- </video>-->
-  
-  <div class="links">
+
+  <div class="title_bar">
     <span id="title" class="capWave">Austin Bauer</span>
-    
+
     <a href="https://www.youtube.com/channel/UC2pxYOfTOlloD36TczY-yYA" target="_blank">
-      <img src="assets/youtube_social_square_dark_2.png" style="right: 12px; position: fixed; top: 5px;">
+      <img class="youtube_icon" src="assets/youtube_social_square_dark_2.png" style="right: 12px; position: absolute; top: 5px;">
     </a>
-    
   </div>
-
-  <hr style="background-color: #292929; height: 62px; width: 100%; top: -10px; left: 0%; position: fixed; z-index: 2; border: none;">
-  <hr style="background-color: white; height: 3px; width: 100%; position: fixed; z-index: 3; top: 50px; left: 0%;">
+  <!--  <hr style="background-color: white; height: 3px; width: 100%; position: fixed; z-index: 3; top: 50px; left: 0%;">-->
+  <div id="seekBox">
+    <span id="prev" class="capWave">prev</span>
+    <span id="home" class="capWave">home</span>
+    <span id="next" class="capWave">next</span>
+  </div>
   <div class="content">
-    <div id="seekBox">
-      <span id="prev" class="capWave">prev</span>
-      <span id="home" class="capWave">home</span>
-      <span id="next" class="capWave">next</span>
+
+
+    <div class="project_title"></div>
+
+    <div class="project_container">
+      <iframe id="youtube" allowfullscreen="true" data-ratio="0.5625" data-width="1280" data-height="720"></iframe>     
+      <div class="project_image"><a href="" target="_blank"><img src="" alt="" class="project_image"></a></div>
     </div>
-    <div class="project_text"></div>
-    <iframe id="youtubeVid" allowfullscreen="true" data-ratio="0.5625" data-width="1280" data-height="720"></iframe>
-    <div class="slideshow-container">
-      <div class="slides fade">
-        <div class="numbertext">1 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_0191.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">2 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_0195.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">3 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_0197.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">4 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_0201.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">5 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_0219.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">6 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_0230.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">7 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_7035.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">8 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_7041.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">9 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_7062.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">10 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_7415.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">11 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_7476.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">12 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_7494.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">13 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_7502.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">14 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_7517.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">15 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_7529.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">16 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_9823.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">17 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_9827.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">18 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_9847.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">19 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_9870.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">20 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_9884.jpg" style="width:100%">
-      </div>
-
-      <div class="slides fade">
-        <div class="numbertext">21 / 21</div>
-        <img src="./assets/growthdecay/images/large/IMG_9928.jpg" style="width:100%">
-      </div>
-
-      <a id="left" onclick="plusSlides(-1)">&#10094;</a>
-      <a id="right" onclick="plusSlides(1)">&#10095;</a>
+    
+    <div class="slideshow_container">
+        <div class="ss_tile_image"><img src="" alt="" id="ss1"></div>
+        <div class="ss_tile_image"><img src="" alt="" id="ss2"></div>
+        <div class="ss_tile_image"><img src="" alt="" id="ss3"></div>
+        <br><br>
+        <a id="ss_link" class="capWave" href="">Click to view slideshow</a>
     </div>
-
+      
     <div class="info_text"></div>
-    <div id="links_projects" class="capWave">back to projects</div>
   </div>
-<!--    <hr style="background-color: white; height: 3px; width: 100%; bottom: 0px; left: 0px;">-->
+  <!--    <hr style="background-color: white; height: 3px; width: 100%; bottom: 0px; left: 0px;">-->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="random.js"></script>
+
+  <script src="project.js"></script>
   <script src="content.js"></script>
 </body>
 

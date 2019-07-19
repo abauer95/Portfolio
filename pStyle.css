@@ -1,72 +1,33 @@
 body {
   background: #292929;
 }
+/*=--------------------------------------Title Bar--------------------------------------------------------*/
+.title_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #292929;
+  border-bottom: solid 4px white;
+  width: 100%;
+  height: 60px;
+}
 
 #title {
-/*  font-family: 'Averia Serif Libre', serif;*/
-  font-family: 'Cutive Mono', monospace;
+  font-family: 'Averia Serif Libre', serif;
+/*  font-family: 'Cutive Mono', monospace;*/
   font-size: 32pt;
   color: white;
   user-select: none;
-  position: fixed;
+  position: absolute;
   z-index: 4;
   left: 5px;
+  top: 5px;
   transition: 0.6s ease;
 }
 
-#title:hover {
-  animation: colorShiftBlue 2s ease infinite;
-}
-
-#backgroundVideo {
-  position: fixed;
-  padding: 0;
-  margin: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  min-width: auto%;
-  min-height: auto%;
-}
-
-.links {
-  font-family: 'Cutive Mono', monospace;
-  font-size: 36pt;
-  color: white;
-  text-align: center;
-  user-select: none;
-  position: fixed;
-  top: 5px;
-  left: calc(50% - 100px);
-  z-index: 3;
-}
-
-.content{
-  width: 100%;
-  height: auto;
-  top: 60px;
-  left: 0px;
-  margin-bottom: 25px;
-  position: relative;
-  z-index: 0;
-}
-
-#links_projects{
-  color: white;
-  font-family: 'Cutive Mono', monospace;
-  font-size: 24pt;
-  margin-top: 25px;
-  text-align: center;
-  display: none;
-  user-select: none;
-}
-
-#links_info:hover,
-#links_projects:hover,
-#links_contact:hover,
 #title:hover{
   color: burlywood;
-  cursor: pointer;
 }
 
 a{
@@ -75,20 +36,67 @@ a{
 }
 
 a:hover{
-  opacity: .2;
+  opacity: .9;
 }
 
-.info_text {
-  font-size: 20pt;
+* {
+  box-sizing: border-box
+}
+
+img {
+  vertical-align: middle;
+}
+
+/*-------------------------------------Seek Box-------------------------------*/
+#seekBox{
+  top: 0px;
+  width: 300px;
+  left: calc(50% - 150px);
+  height: 60px;
+  position: fixed;
+  text-align: center;
+  z-index: 6;
+  background: white;
+  display: none;
+  transition: 0.6s ease;
+}
+
+#prev,
+#home,
+#next{
+  cursor: pointer;
   font-family: 'Cutive Mono', monospace;
-  color: white;
-  text-align: left;
-  width: 600px;
-  left: calc(50% - 300px);
+  color: black;
+  font-weight: bold;
   position: relative;
+  top: 9px;
+  font-size: 24pt;
+  padding-left: 8px;
+  padding-right: 8px;
+  transition: 0.6s ease;
+  color: #0070c0;
 }
 
-.project_text {
+
+#prev:hover,
+#home:hover,
+#next:hover{
+  color: red;
+}
+
+
+/*--------------------------------------content----------------------------------*/
+.content{
+  width: 100%;
+  height: auto;
+  top: 30px;
+  left: 0px;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 0;
+}
+
+.project_title {
   font-size: 28pt;
   font-family: 'Cutive Mono', monospace;
   color: white;
@@ -97,18 +105,6 @@ a:hover{
   user-select: none;
   position: relative;
   text-shadow: 1px 1px black;
-  display: block;
-}
-
-.projButtons {
-  font-size: 20pt;
-  font-family: 'Cutive Mono', monospace;
-  color: white;
-  text-align: center;
-  width: auto;
-  margin-bottom: 15px;
-  position: relative;
-  user-select: none;
   display: block;
 }
 
@@ -130,58 +126,22 @@ a:hover{
   transition: 250ms ease;
 }
 
-* {
-  box-sizing: border-box
-}
-
-.mySlides {
-  display: none
-}
-
-img {
-  vertical-align: middle;
-}
-
-.slideshow-container {
-  max-width: 1600px;
-  position: relative;
-  margin-top: 35px;
-  margin-bottom: 35px;
-  left: calc(50% - 800px);
-  display: none;
-}
-
-#prev,
-#home,
-#next{
-  cursor: pointer;
+.info_text {
+  font-size: 20pt;
   font-family: 'Cutive Mono', monospace;
-  color: black;
-  font-weight: bold;
-  font-size: 32px;
-  padding-left: 6px;
-  padding-right: 6px;
-  transition: 0.6s ease;
+  color: white;
+  text-align: left;
+  left: 20%;
+  right: 20%;
+  width: 60%;
+  position: relative;
+  margin-top: 10px;
 }
 
 
-#prev:hover,
-#home:hover,
-#next:hover{
-  color: burlywood;
-}
 
-#seekBox{
-  top: 20px;
-  width: 300px;
-  left: calc(50% - 150px);
-  position: fixed;
-  text-align: center;
-  z-index: 3;
-  background: white;
-  display: inherit;
-  transition: 0.6s ease;
-}
+
+/*---------------------------------------------------Slideshow----------------------------------*/
 
 .numbertext{
   color: #f2f2f2;
@@ -190,6 +150,7 @@ img {
   font-family: 'Cutive Mono', monospace;
   position: absolute;
   top: 0;
+  z-index: 1;
 }
 
 #right,
@@ -216,6 +177,97 @@ img {
   color: red;
   opacity: 1;
 }
+
+/*-------------------------------------------project----------------------------------------*/
+
+.project_container{
+  width: 100%;
+  padding-top: 45.8%;
+  height: auto;
+  left: 0;
+  top: 0;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.slideshow_container{
+  border: 0px;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  display: none;
+}
+
+.slide_image{
+  border: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  background: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ss_tile_image{
+  display: inline-block;
+  width: 348px;
+  height: 232px;
+  background: red;
+  margin: 10px;
+  box-shadow: -5px 5px 4px 1px #101010;
+}
+
+#ss_link{
+  cursor: pointer;
+  font-family: 'Cutive Mono', monospace;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20pt;
+  transition: 0.6s ease;
+  color: #0070c0;
+}
+
+#ss_link:hover{
+  color: red;
+}
+
+.project_image{
+  border: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#youtube{
+  border: 0px;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  bottom: 0;
+  right: 10%;
+  width: 80%;
+  height: 100%;
+  background: #101010;
+}
+
+/*------------------------------------------animations----------------------------------------*/
 
 @keyframes colorShiftRed{
   0%{
@@ -255,19 +307,10 @@ img {
   }
 }
 
-#youtubeVid {
-  border: 0px;
-  display: block;
-  position: relative;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  width: 1600px;
-  height: 900px;
-  left: calc(50% - 800px);
-}
+/*------------------------------------------------scaling--------------------------------------------------*/
 
-@media screen and (max-width: 1600px) {
-  #youtubeVid {
+/*@media screen and (max-width: 1600px) {
+  #youtube {
     border: 0px;
     display: block;
     position: relative;
@@ -278,45 +321,98 @@ img {
     left: calc(50% - 640px);
   }
 
-  .slideshow-container {
+  .slideshow_container {
     max-width: 1200px;
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
     left: calc(50% - 600px);
   }
-}
+}*/
 
 @media screen and (max-width: 1280px) {
-  #youtubeVid {
-    border: 0px;
-    display: block;
-    position: relative;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 600px;
-    height: 337.5px;
-    left: calc(50% - 300px);
+  #youtube{
+    width: 90%;
+    left: 5%;
   }
-
-  .slideshow-container {
-    max-width: 600px;
-    position: relative;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    left: calc(50% - 300px);
+  
+  .info_text{
+    width: 80%;
+    left: 10%;
+    right: 10%;
+  }
+  
+  .project_title{
+    font-size: 24pt;
   }
 }
 
-@media screen and (max-width: 645px){
-  #youtubeVid {
-    max-width:356px;
-    max-height:64px;
-    width:auto;
-    height:auto;
+@media screen and (max-width: 850px){
+  #seekBox{
+    width: 100%;
+    left: 0;
+    height: 32px;
   }
   
-  .items{
+  #prev,#home,#next{
+    font-size: 20pt;
+    top: 1px;
+  }
+  
+  .title_bar{
+    height: 34px;
+    border-bottom: solid 2px white;
+  }
+  
+  #title{
+    font-size: 20pt;
+    top: 0px;
+  }
+  
+  .content{
+    margin-top: 0;
+    top: 0;
+  }
+  
+  .project_title{
+    font-size: 20pt;
+  }
+  
+  .youtube_icon{
+    width:27px;
+  }
+}
+
+@media screen and (max-width: 760px){
+  .project_image {
+    left: 0%;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .project_container{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 57%;
+  }
+  
+  #youtube{
+    width: 100%;
+    left: 0;
+  }
+  
+  .info_text{
     width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 642px){
+  .items{
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
