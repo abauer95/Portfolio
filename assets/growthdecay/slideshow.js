@@ -3,7 +3,7 @@ var info = {
   thumbnailImage: 'assets/thumb_growth.png',
   description: 'A photograph series exploring the growth and decay of plants and lost objects found years later.',
   type: 'slideshow',
-  folderLink: '/images',
+  folderLink: '/assets/growthdecay/images',
   link: '/gallery.html',
   size: 21
 };
