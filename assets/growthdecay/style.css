@@ -1,0 +1,159 @@
+body{
+  background-color: #292929;
+  overflow-x: hidden;
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  text-align: center;
+}
+
+.thumbnail_image{
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: 8px;
+  box-shadow: -2px 2px 6px 1px #101010;
+}
+
+.thumbnail_image:hover{
+  cursor: pointer;
+  opacity: .8;
+}
+
+/*
+.large_image{
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  z-index: 3;
+  vertical-align: middle;
+  box-shadow: -3px 3px 15px 1px #101010;
+}
+*/
+
+.large_image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: -3px 3px 15px 1px #101010;
+  z-index: 3;
+}
+
+/*.large_image {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  box-shadow: -3px 3px 15px 1px #101010;
+  z-index: 3;
+}*/
+
+.text{
+  color: white;
+  text-align: center;
+  font-size: 18pt;
+  font-family: 'Cutive Mono', monospace;
+}
+
+.full{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  position: absolute;
+  background-color: rgba(50, 50, 50, .6);
+  z-index: 2;
+  transition: .6 ease;
+}
+
+/*.full:before{
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  height: 100%;
+  max-width: 100%;
+}*/
+
+.close{
+  right: 5px;
+  top: 5px;
+  font: bold 24pt 'Cutive Mono', monospace;
+  width: 45px;
+  height: 39px;
+  color: white;
+  position: absolute;
+  z-index: 4;
+  user-select: none;
+}
+
+.close:hover{
+  cursor: pointer;
+  background-color: rgba(100, 100, 100, 0.6);
+  opacity: .7;
+  color: red;
+}
+
+.fullscreen{
+  right: 45px;
+  top: 5px;
+  font: bold 24pt 'Cutive Mono', monospace;
+  width: 35px;
+  height: 39px;
+  color: white;
+  position: absolute;
+  z-index: 4;
+  user-select: none;
+}
+
+.fullscreen:hover{
+  cursor: pointer;
+  background-color: rgba(100, 100, 100, 0.6);
+  opacity: .7;
+  color: red;
+}
+
+.left{
+  left 5px;
+  top: 48%;
+  position: absolute;
+  font: bold 24pt 'Cutive Mono', monospace;
+  text-align: center;
+  z-index: 4;
+  color: white;
+  width: 25px;
+  height: 39px;
+  user-select: none;
+}
+
+.right{
+  right: 5px;
+  top: 48%;
+  position: absolute;
+  font: bold 24pt 'Cutive Mono', monospace;
+  z-index: 4;
+  color: white;
+  width: 25px;
+  height: 39px;
+  user-select: none;
+}
+
+.left:hover,
+.right:hover{
+  background-color: rgba(100, 100, 100, 0.6);
+  cursor: pointer;
+  color: red;
+}
