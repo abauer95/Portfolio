@@ -60,7 +60,7 @@ var projects = [
     description: 'A photograph series exploring the growth and decay of plants and lost objects found years later.',
     type: 'slideshow',
     folderLink: '/assets/growthdecay/images',
-    link: '/assets/growthdecay/index.html',
+    link: '/assets/growthdecay/gallery.html',
     size: 21
   },
   {
